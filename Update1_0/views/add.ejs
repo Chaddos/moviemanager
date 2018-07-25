@@ -1,0 +1,78 @@
+<link rel="stylesheet" type="text/css" href="/styles.css"/>
+<%- include header %>
+    <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                           
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Add Movie</div>
+                            <!-- <div style="float:right; font-size: 85%; position: relative; top:-10px"><a href="/home/movies">Movies</a></div> -->
+                        </div> 
+                        <div class="panel-body" >
+                            <form class="form-horizontal" role="form" method="post" action="/home/addmovie" onSubmit="return checkblank(this);">
+                                <% if (message.length > 0) { %>
+                                                                                                            <div class="alert alert-success col-sm-12"><%= message %></div>
+                                                                                                <% } %>
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="movie_name" class="col-md-3 control-label">Title</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="movie_name" placeholder="Movie Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="movie_genre" class="col-md-3 control-label">Genre</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="movie_genre" placeholder="Genre">
+                                    </div>
+                                </div>
+                                                                                                <div class="form-group">
+                                    <label for="movie_director" class="col-md-3 control-label">Director</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="movie_director" placeholder="Director">
+                                    </div>
+                                </div>
+                                                                                                <div class="form-group">
+                                    <label for="movie_language" class="col-md-3 control-label">Language</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="movie_language" placeholder="Language">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="movie_year" class="col-md-3 control-label">Year</label>
+                                    <div class="col-md-9">
+                                        <input type="number" class="form-control" name="movie_year" placeholder="Year">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="movie_desc" class="col-md-3 control-label">Description</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="movie_desc" placeholder="Description">
+                                    </div>
+                                </div>
+ 
+                                <div class="form-group">
+                                    <!-- Button -->                                       
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Add Movie</button>
+                                        
+                                    </div>
+                                </div>
+                               
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+              
+                
+         </div>
+    </div>
+
+<%- include footer %>
+ 

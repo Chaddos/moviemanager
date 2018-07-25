@@ -1,0 +1,64 @@
+<%- include header.ejs %>
+<div class="container col-sm-12" id="mainform">
+    <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                                                   
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Edit Profile</div>
+                    <!-- <div style="float:right; font-size: 85%; position: relative; top:-10px"><a href="/home/movies">Movies</a></div> -->
+                </div> 
+                <div class="panel-body" >
+                    <form class="form-horizontal" role="form" method="post" action="/home/editprofile/<%=data[0].id%>" onSubmit="return checkblank(this);">
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                            <span></span>
+                        </div>
+                            
+                        <div class="form-group">
+                            <label for="first_name" class="col-md-3 control-label">First Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="first_name" value="<%=data[0].first_name%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name" class="col-md-3 control-label">Last Name:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="last_name" value="<%=data[0].last_name%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mob_no" class="col-md-3 control-label">Mobile Number:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="mob_no" value="<%=data[0].mob_no%>">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user_name" class="col-md-3 control-label">Username:</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="user_name" value="<%=data[0].user_name%>">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- Button -->                                       
+                            <div class="col-md-offset-3 col-md-9">
+                                <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Save Edit</button>
+                                
+                            </div>
+                        </div>
+                       
+                        
+                        
+                        
+                    </form>
+                 </div>
+            </div>
+      
+        
+ </div>
+</div>
+        
+<%- include footer.ejs %>
+
+
+

@@ -1,0 +1,58 @@
+<link rel="stylesheet" type="text/css" href="/styles.css"/>
+<%- include header %>
+
+<form method="post" action="/home/deleteall" style="float:right">
+    <input type="submit" name="delete" value='DELETE ALL' style="background-color: #E0DADB;color:black;float:right;margin-bottom: 5px;border-radius: 30%;" onClick="return confirm('Are you sure you want to delete all movies?')" />
+    <input type="hidden" name="_method" value="DELETE ALL"  />
+</form>
+<div class="container-fluid" >
+    <div class="row" >
+        <div class="col-sm-12" style="display: inline-block;">
+
+                <% if (data) { %>
+                    <% data.forEach(function(user){ %>
+                        <div class="moviedisplay">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                <h1 class="card-title" style="background-color: #77C5F0;border-radius: 5px;padding-right: 0px;"><%= user.movie_name %></h1>
+                                <div class="edit_delete">
+                                        <a href='/home/edit/<%= user.id %>'><span class="glyphicon glyphicon-edit"></span></a>&nbsp;
+                                        <a href='/home/deletemovie/<%= user.id %>'><span class="glyphicon glyphicon-remove"></span></a>
+                                </div>
+                                <h4 class="card-title headings">Genre:</h4>
+                                <p class="card-text"><%= user.movie_genre %></p>
+                                <h4 class="card-title headings">Description:</h4>
+                                <p class="card-text"><%= user.movie_desc %></p>
+                                <h4 class="card-title headings">Director:</h4>
+                                <p class="card-text"><%= user.movie_director %></p>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                    <% } %>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Title</h1>
+            <p class="card-text">Genre</p>
+            <p class="card-text">Descr</p>
+            <p class="card-text">Year</p>
+            <p class="card-text">Year</p>
+        </div>
+    </div> -->
+
+
+
+
+                   
+         
+
+           
+ <%- include footer %>
+
+                           
