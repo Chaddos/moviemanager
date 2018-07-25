@@ -8,5 +8,5 @@ Instructions:
 4. Initiate program with the following command: node app.js
 5. Access web application by typing following in web browser: localhost:8080 
 
--- This project will always be updated --
+-- This project will be updated occasionaly.--
 
